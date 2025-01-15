@@ -1,19 +1,19 @@
-# 汉字拼音查询包 (Hanzi-Pinyin)
+# 汉字拼音查询包 (Pinyin-Dict)
 
 [![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue?style=flat-square&logo=github)](https://github.com/neooier/hanzi-pinyin-py.git)
-[![License](https://img.shields.io/github/license/neooier/hanzi-pinyin.svg?style=flat-square)](https://github.com/neooier/hanzi-pinyin/blob/main/LICENSE)
-[![PyPI version](https://img.shields.io/pypi/v/hanzi-pinyin.svg?style=flat-square)](https://pypi.org/project/hanzi-pinyin/)
+[![License](https://img.shields.io/github/license/neooier/hanzi-pinyin-py.svg?style=flat-square)](https://github.com/neooier/hanzi-pinyin-py/blob/main/LICENSE)
+[![PyPI version](https://img.shields.io/pypi/v/pinyin_dict.svg?style=flat-square)](https://pypi.org/project/pinyin_dict/)
 
-[English](README_en.md)
+<!-- [English](README_en.md) -->
 
 ## 描述
-`hanzi-pinyin` 是一个用于查询汉字拼音（罗马化）的包。它提供了获取简体和详细拼音表示的工具。
+`pinyin_dict` 是一个用于查询汉字拼音（罗马化）的包。它提供了获取简体和详细拼音表示的工具。
 
 ## 安装
 你可以使用 pip 来安装这个包：
 
 ```bash
-pip install hanzi-pinyin
+pip install pinyin_dict
 ```
 
 ## 使用方法
@@ -22,7 +22,7 @@ pip install hanzi-pinyin
 你可以按以下方式从包中导入函数：
 
 ```python
-from hanzi_pinyin import pinyin, detailed_pinyin, alls
+from pinyin_dict import pinyin, detailed_pinyin, alls
 ```
 
 ### 函数

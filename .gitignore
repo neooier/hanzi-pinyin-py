@@ -2,4 +2,4 @@ __pycache__
 .venv
 build
 dist
-hanzi_pinyin.egg-info
+*.egg-info

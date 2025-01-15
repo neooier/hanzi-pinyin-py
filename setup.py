@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='hanzi-pinyin',
+    name='pinyin_dict',
     version='0.1',
     packages=find_packages(),
     description='query the pinyin of Chinese characters.',
