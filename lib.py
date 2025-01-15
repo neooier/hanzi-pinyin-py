@@ -14,5 +14,5 @@ def pinyin(char):
 def detailedPinyin(char):
     return _dict.get(char, [])
 
-def all():
+def alls():
     return _dict
