@@ -1,11 +1,11 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='hanzi-pinyin',
+    name='hanzi_pinyin',
     version='0.1',
     packages=find_packages(),
     description='query the pinyin of Chinese characters.',
-    long_description=open('README.md').read(),
+    long_description=open('README.md',encoding='utf-8').read(),
     long_description_content_type='text/markdown',
     author='neooier',
     author_email='53945377+neooier@users.noreply.github.com',
