@@ -6,7 +6,7 @@ from unidecode import unidecode
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 # Load the dictionary from the JSON file
-with open(os.path.join(current_dir, './dict.json'), 'r', encoding='utf-8') as file:
+with open(os.path.join(current_dir, 'dict.json'), 'r', encoding='utf-8') as file:
     global _dict
     _dict = json.load(file)
 
