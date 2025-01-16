@@ -1,27 +1,26 @@
-name: Publish Python Package
+name: Publish Python Package on Release
 
 on:
-  push:
-    tags:
-      - 'v*'  # 触发条件：推送以 'v' 开头的标签时
+  release:
+    types: [published]  # 监听 Release 发布事件
 
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
 
-    - name: Extract version from tag
+    - name: Extract version from Release
       id: extract_version
       run: |
-        # 提取 Git 标签并去掉 'v' 前缀
-        TAG_VERSION=$(echo $GITHUB_REF | sed 's/refs\/tags\/v//')
-        echo "Extracted version: $TAG_VERSION"
-        echo "PACKAGE_VERSION=$TAG_VERSION" >> $GITHUB_ENV
+        # 提取 Release 的版本号
+        RELEASE_VERSION=$(echo $GITHUB_REF | sed 's/refs\/tags\/v//')
+        echo "Extracted version: $RELEASE_VERSION"
+        echo "PACKAGE_VERSION=$RELEASE_VERSION" >> $GITHUB_ENV
 
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v5
       with:
         python-version: '3.6.15'  # 指定 Python 版本
 
