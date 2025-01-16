@@ -1,9 +1,12 @@
 from setuptools import setup, find_packages
 from pathlib import Path
+import os
 
+# 从环境变量获取版本号，默认为 '0.0.0'
+VERSION = os.getenv('PACKAGE_VERSION', '0.0.0')
 setup(
     name='hanzi_pinyin',
-    version='0.2.3',
+    version=VERSION,
     packages=find_packages(),
     description='Query the pinyin of Chinese characters.',
     long_description=Path('README.md').read_text(encoding='utf-8'),
@@ -14,6 +17,9 @@ setup(
     install_requires=[
         'unidecode',
     ],
+    package_data={
+        'hanzi_pinyin': ['dict.json'],
+    },
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
